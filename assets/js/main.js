@@ -44,7 +44,7 @@
 					x.innerHTML = "Get Geolocation infomation failed.";
 				}
 
-				var time_api= 'http://api.sunrise-sunset.org/json?lat=' + lat + '&lng=' + lng + '&formatted=0';
+				var time_api= 'https://api.sunrise-sunset.org/json?lat=' + lat + '&lng=' + lng + '&formatted=0';
 				$.getJSON(time_api, function(sun){
 					var sunrise = new Date(sun.results.sunrise).getHours(),
 						sunset  = new Date(sun.results.sunset).getHours(),
@@ -64,7 +64,7 @@
 					}
 				});
 
-				var base = 'http://www.bing.com',
+				var base = 'https://www.bing.com',
 				    json_url = '/HPImageArchive.aspx?format=js&idx=0&n=1';
 				$.getJSON(base + json_url, function(json){
 					var img_url = base + json.images[0].url;
