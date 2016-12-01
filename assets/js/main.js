@@ -25,16 +25,12 @@
 				}, 0);
 			});	
 
-		// Set greeting message
+			// Load website
 			$window.on('load', function(){
-				var lat = 43.6319,
+
+				// Get current location
+				var lat = 43.6319,   //default: Vancouver, BC
 					lng = -79.3716,
-					curr    = new Date();
-					$('#time').text('' + curr.getHours()
-										 + ' : ' 
-										 + curr.getMinutes()
-										 + ' : '
-										 + curr.getSeconds());
 				if(navigator.geolocation) {
 					navigator.geolocation.getCurrentPosition(function(location){
 						lat = location.coords.latitude;
@@ -43,27 +39,30 @@
 				} else {
 					x.innerHTML = "Get Geolocation infomation failed.";
 				}
+				
+				// get today's sunlight times for current location
+				var curr    = new Data();
+				var times   = SunCalc.getTime(curr, lat, lng);
+				var sunrise = times.sunrise.getHours(),
+					sunset  = times.sunset.getHours(),
+					noon    = 12;
 
-				var time_api= 'http://api.sunrise-sunset.org/json?lat=' + lat + '&lng=' + lng + '&formatted=0';
-				$.getJSON(time_api, function(sun){
-					var sunrise = new Date(sun.results.sunrise).getHours(),
-						sunset  = new Date(sun.results.sunset).getHours(),
-						noon    = 12,
-						curr    = new Date();
-					$('#time').text('' + curr.getHours()
-										 + ' : ' 
-										 + curr.getMinutes()
-										 + ' : '
-										 + curr.getSeconds());
-					if(curr.getHours() < noon && curr.getHours() > sunrise){
-						$('#greeting').html("Good Morning!");
-					} else if(curr.getHours() > noon && curr.getHours() < sunset) {
-						$('#greeting').html("Good Afternoon!");
-					} else {
-						$('#greeting').html("Good Evening!");
-					}
-				});
+				$('#time').text('' + curr.getHours()
+										+ ' : ' 
+										+ curr.getMinutes()
+										+ ' : '
+										+ curr.getSeconds());
 
+				// Set greeting message 
+				if(curr.getHours() < noon && curr.getHours() > sunrise){
+					$('#greeting').html("Good Morning!");
+				} else if(curr.getHours() > noon && curr.getHours() < sunset) {
+					$('#greeting').html("Good Afternoon!");
+				} else {
+					$('#greeting').html("Good Evening!");
+				}
+				
+				// Get today's bing wallpaper as background image
 				var base = 'https://www.bing.com',
 				    json_url = '/HPImageArchive.aspx?format=js&idx=0&n=1';
 				$.getJSON(base + json_url, function(json){

@@ -5,10 +5,10 @@
 
 - Template is created by [HTML5 UP](https://html5up.net/) <img src="https://html5up.net/assets/icons/favicon.ico" width=18px alt="HTML5 UP"/>
 - Background image is powered by [Bing Homepage Gallery](http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1) <img src="http://www.bing.com/sa/simg/bing_p_rr_teal_min.ico" width=18px alt="Bing Homepage Gallery"/>
-- Sunrise/sunset time is powered by [Sunrise Sunset](http://sunrise-sunset.org/api) <img src="http://sunrise-sunset.org/logo-v1_62x47.svg" width=18px alt="Sunrise Sunset"/>
 - Gallery function is powered by [Poptrox](https://github.com/ajlkn/jquery.poptrox) <img src="https://avatars3.githubusercontent.com/u/2937342?v=3&s=400" width=18px alt="Poptrox"/>
 - Contact form is powered by [Formspree](https://formspree.io/) <img src="https://formspree.io/static/img/logo.png" width=18px alt="Formspree.io"/>
 - Icons are powered by [Font Awesome](https://fortawesome.github.io/Font-Awesome/cheatsheet) <img src="http://fontawesome.io/assets/ico/favicon.ico" width=18px alt="FontAwesome"/>
+- Sunrise/sunset time is powered by [SunCalc](https://github.com/mourner/suncalc)
 
 ### Big Picture
 Being a single pager, Big Picture should be way simpler to work with than
