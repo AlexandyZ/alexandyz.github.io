@@ -44,7 +44,7 @@
 					x.innerHTML = "Get Geolocation infomation failed.";
 				}
 
-				var time_api= 'https://api.sunrise-sunset.org/json?lat=' + lat + '&lng=' + lng + '&formatted=0';
+				var time_api= 'http://api.sunrise-sunset.org/json?lat=' + lat + '&lng=' + lng + '&formatted=0';
 				$.getJSON(time_api, function(sun){
 					var sunrise = new Date(sun.results.sunrise).getHours(),
 						sunset  = new Date(sun.results.sunset).getHours(),
