@@ -30,8 +30,8 @@
 
 				// Get current location
 				var lat = 43.6319,   //default: Vancouver, BC
-					lng = -79.3716,
-				if(navigator.geolocation) {
+					lng = -79.3716;
+				if (navigator.geolocation) {
 					navigator.geolocation.getCurrentPosition(function(location){
 						lat = location.coords.latitude;
 						lng = location.coords.longitude;
@@ -41,8 +41,8 @@
 				}
 				
 				// get today's sunlight times for current location
-				var curr    = new Data();
-				var times   = SunCalc.getTime(curr, lat, lng);
+				var curr    = new Date();
+				var times   = SunCalc.getTimes(curr, lat, lng);
 				var sunrise = times.sunrise.getHours(),
 					sunset  = times.sunset.getHours(),
 					noon    = 12;
