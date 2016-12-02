@@ -107,12 +107,6 @@ slide into view from the right.
     ```
     You can also just remove the `"from-(direction)"` class if you don't want that particular image to slide into view (in which case it'll simply fade in).
 
-
-### Contact Form:
-To get this working, place a script on your server to receive the form data, then point the "action" attribute to it (eg. action="http://mydomain.tld/mail.php"). More on how it all works here: twebdesigner.com/tutorials/custom-php-contact-forms
-
-
-
 ### Other Stuff:
 
 - Either change "images/overlay.png" to something else, or remove all references to it from css/style.css could erase tinted images
