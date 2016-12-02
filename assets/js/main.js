@@ -25,7 +25,7 @@
 				}, 0);
 			});	
 
-			// Load website
+		// Load website
 			$window.on('load', function(){
 
 				
@@ -45,20 +45,25 @@
 				 */
 				
 				// Sunrise/sunset time is powered by [SunCalc](https://github.com/mourner/suncalc)
-				// get today's sunlight times for current location
-				var curr    = new Date();
-				//var times   = SunCalc.getTimes(curr, lat, lng);
+			// Get current time and set greeting message
+				var curr = new Date();
+
+				setInterval(function(){
+					var time = new Date();
+					$('#time').text(('0' + time.getHours()).slice(-2)
+									+ ' : ' 
+									+ ('0' + time.getMinutes()).slice(-2)
+									+ ' : '
+									+ ('0' + time.getSeconds()).slice(-2))
+						  	  .setTimeout(1000);
+					}, 1000);
+
+				// Set greeting message 
+				// var times   = SunCalc.getTimes(curr, lat, lng);
 				var sunrise = 6,
 					sunset  = 18,
 					noon    = 12;
 
-				$('#time').text('' + curr.getHours()
-										+ ' : ' 
-										+ curr.getMinutes()
-										+ ' : '
-										+ curr.getSeconds());
-
-				// Set greeting message 
 				if(curr.getHours() < noon && curr.getHours() > sunrise){
 					$('#greeting').html("Good Morning!");
 				} else if(curr.getHours() > noon && curr.getHours() < sunset) {
@@ -67,7 +72,7 @@
 					$('#greeting').html("Good Evening!");
 				}
 
-				// Use CORS Anywhere to set the CORS headers
+			// Use CORS Anywhere to set the CORS headers
 				$.ajaxPrefilter( function (options) {
 					if (options.crossDomain && jQuery.support.cors) {
 						var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
@@ -75,7 +80,7 @@
 					}
 				});
 
-				// Get today's bing wallpaper as background image
+			// Get today's bing wallpaper as background image
 				var base = 'https://www.bing.com',
 				    json_url = '/HPImageArchive.aspx?format=js&idx=0&n=1';
 				
@@ -89,10 +94,6 @@
 				});
 			});
 
-		// Set Bing Gallery Image as background
-			/*$window.on('load', function(){
-				
-			});*/
 		// Touch mode.
 			skel.on('change', function() {
 
@@ -137,8 +138,16 @@
 
 					})
 					.triggerHandler('resize.ie-flexbox-fix');
-
 			}
+
+		// Dynamic text using typed.js
+		
+			$("#text-dynamic").typed({
+				strings: ["a BCITer.", "a Coder.", "a Learner.", "a Hiker", "Alex."],
+				typeSpeed: 50,
+				startDelay: 15,
+				showCursor: false,
+			});
 
 		// Prioritize "important" elements on small.
 			skel.on('+small -small', function() {

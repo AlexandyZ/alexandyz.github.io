@@ -120,3 +120,4 @@ slide into view from the right.
 - jquery.scrollgress (@ajlkn)
 - Skel (skel.io)
 - CORS Anywhere (@Rob--W)
+- Typed.js (@mattboldt)
