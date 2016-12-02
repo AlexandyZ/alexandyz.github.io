@@ -8,12 +8,9 @@
 - Gallery function is powered by [Poptrox](https://github.com/ajlkn/jquery.poptrox) <img src="https://avatars3.githubusercontent.com/u/2937342?v=3&s=400" width=18px alt="Poptrox"/>
 - Contact form is powered by [Formspree](https://formspree.io/) <img src="https://formspree.io/static/img/logo.png" width=18px alt="Formspree.io"/>
 - Icons are powered by [Font Awesome](https://fortawesome.github.io/Font-Awesome/cheatsheet) <img src="http://fontawesome.io/assets/ico/favicon.ico" width=18px alt="FontAwesome"/>
-- Sunrise/sunset time is powered by [SunCalc](https://github.com/mourner/suncalc)
 
 ### Big Picture
-Being a single pager, Big Picture should be way simpler to work with than
-some of the heavier stuff I've released in the past. In fact, aside from
-a main page `<header>` and `<footer>`, it's pretty much just a stack of "main" `<section>` elements that follow the same basic pattern:
+Being a single pager, Big Picture should be way simpler to work with than some of the heavier stuff. Aside from a main page `<header>` and `<footer>`, it's pretty much just a stack of "main" `<section>` elements that follow the same basic pattern:
 ```
 <section id="foobar" class="main">
     <div class="content container">
@@ -128,3 +125,4 @@ To get this working, place a script on your server to receive the form data, the
 - jquery.scrolly (@ajlkn)
 - jquery.scrollgress (@ajlkn)
 - Skel (skel.io)
+- CORS Anywhere (@Rob--W)

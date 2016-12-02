@@ -28,18 +28,23 @@
 			// Load website
 			$window.on('load', function(){
 
-				// Get current location
-				/*var lat = 43.6319,   //default: Vancouver, BC
-					lng = -79.3716;
-				if (navigator.geolocation) {
-					navigator.geolocation.getCurrentPosition(function(location){
-						lat = location.coords.latitude;
-						lng = location.coords.longitude;
-					});
-				} else {
-					x.innerHTML = "Get Geolocation infomation failed.";
-				}*/
 				
+				/** 
+				 * Get current geolocation information snippet
+				 *  
+				 * var lat = 43.6319,   //default: Vancouver, BC
+				 * lng = -79.3716;
+				 * if (navigator.geolocation) {
+				 * navigator.geolocation.getCurrentPosition(function(location){
+				 *		lat = location.coords.latitude;
+				 *		lng = location.coords.longitude;
+				 * });
+				 * } else {
+				 * 		x.innerHTML = "Get Geolocation infomation failed.";
+				 * }
+				 */
+				
+				// Sunrise/sunset time is powered by [SunCalc](https://github.com/mourner/suncalc)
 				// get today's sunlight times for current location
 				var curr    = new Date();
 				//var times   = SunCalc.getTimes(curr, lat, lng);
@@ -61,10 +66,19 @@
 				} else {
 					$('#greeting').html("Good Evening!");
 				}
-				
+
+				// Use CORS Anywhere to set the CORS headers
+				$.ajaxPrefilter( function (options) {
+					if (options.crossDomain && jQuery.support.cors) {
+						var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+						options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+					}
+				});
+
 				// Get today's bing wallpaper as background image
 				var base = 'https://www.bing.com',
 				    json_url = '/HPImageArchive.aspx?format=js&idx=0&n=1';
+				
 				$.getJSON(base + json_url, function(json){
 					var img_url = base + json.images[0].url;
 					$('#intro').css({
