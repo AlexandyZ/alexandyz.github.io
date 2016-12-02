@@ -29,7 +29,7 @@
 			$window.on('load', function(){
 
 				// Get current location
-				var lat = 43.6319,   //default: Vancouver, BC
+				/*var lat = 43.6319,   //default: Vancouver, BC
 					lng = -79.3716;
 				if (navigator.geolocation) {
 					navigator.geolocation.getCurrentPosition(function(location){
@@ -38,13 +38,13 @@
 					});
 				} else {
 					x.innerHTML = "Get Geolocation infomation failed.";
-				}
+				}*/
 				
 				// get today's sunlight times for current location
 				var curr    = new Date();
-				var times   = SunCalc.getTimes(curr, lat, lng);
-				var sunrise = times.sunrise.getHours(),
-					sunset  = times.sunset.getHours(),
+				//var times   = SunCalc.getTimes(curr, lat, lng);
+				var sunrise = 6,
+					sunset  = 18,
 					noon    = 12;
 
 				$('#time').text('' + curr.getHours()
