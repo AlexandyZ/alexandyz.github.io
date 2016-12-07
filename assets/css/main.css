@@ -588,27 +588,49 @@
 		margin-bottom: 1em;
 	}
 
+	#greeting{
+		margin: 50px 0 20px 0;
+	}
 	.tagline {
 		margin: 0;
 		opacity: 1;
 		font-size: 1.3em;
-		font-weight: 500;
 		-webkit-transition: all 0.7s ease-in-out;
 		-moz-transition: all 0.7s ease-in-out;
 		-o-transition: all 0.7s ease-in-out;
 		-ms-transition: all 0.7s ease-in-out;
 		transition: all 0.7s ease-in-out;
 	}
+	
+	#text-dynamic{
+		font-weight: bold;
+	}
 
-	.typed-cursor {
-		font-size: 0.8em;
-		font-weight: 600;
-		padding: 0 2px;
-		-webkit-animation: blink 1s infinite;
-		-moz-animation: blink 1s infinite;
-		-ms-animation: blink 1s infinite;
-		-o-animation: blink 1s infinite;
-		animation: blink 1s infinite;
+	.typed-cursor{
+		opacity: 1;
+		-webkit-animation: blink 1.0s infinite;
+		-moz-animation: blink 1.0s infinite;
+		animation: blink 1.0s infinite;
+	}
+	@keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+	@-webkit-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+	@-moz-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+	
+	#self-intro{
+		margin: 20px 0 10px 0;
+		font-size: 1.2em;
 	}
 /* Box */
 
