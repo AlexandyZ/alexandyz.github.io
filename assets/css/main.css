@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,600,600i,700,700i");
 @import url("font-awesome.min.css");
 
 /* Reset */
@@ -470,7 +470,7 @@
 /* Type */
 
 	body, input, textarea, select {
-		font-family: "Source Sans Pro", "sans-serif";
+		font-family: "Titillium Web", "sans-serif";
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;
@@ -971,6 +971,12 @@
 			width: 100%;
 		}
 
+		.image.circle{
+			display: block;
+			width:20%;
+			border-radius: 50%;
+		}
+
 		.image.left {
 			float: left;
 			margin: 0 2em 2em 0;
@@ -985,6 +991,27 @@
 				margin: 0 auto;
 				width: auto;
 			}
+/* Link */
+	a:link {
+    	text-decoration: none;
+		font-weight: 600;
+	}
+
+	a:visited {
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	a:hover {
+		text-decoration: none;
+		font-weight: 600;
+		font-style: italic;
+	}
+
+	a:active {
+		text-decoration: 600;
+		font-weight: bold;
+	}
 
 /* List */
 
@@ -1961,7 +1988,7 @@
 		@media screen and (max-width: 1920px) {
 
 			.main.style2 .content {
-				width: 40%;
+				width: 80%;
 			}
 
 		}
@@ -1969,7 +1996,7 @@
 		@media screen and (max-width: 1280px) {
 
 			.main.style2 .content {
-				width: 50%;
+				width: 80%;
 			}
 
 		}
@@ -1977,7 +2004,7 @@
 		@media screen and (max-width: 1000px) {
 
 			.main.style2 .content {
-				width: 60%;
+				width: 85%;
 			}
 
 		}

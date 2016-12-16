@@ -47,7 +47,8 @@
 			// Sunrise/sunset time is powered by [SunCalc](https://github.com/mourner/suncalc)
 			// Get current time and set greeting message
 				var curr = new Date();
-
+				
+				// Show current time
 				setInterval(function(){
 					var time = new Date();
 					$('#time').text(('0' + time.getHours()).slice(-2)
@@ -57,13 +58,14 @@
 									+ ('0' + time.getSeconds()).slice(-2));
 					}, 1000);
 
-			// Set greeting message 
-				// var times   = SunCalc.getTimes(curr, lat, lng);
-				var sunrise = 6,
-					sunset  = 18,
+				// Set greeting message 
+				var times   = SunCalc.getTimes(curr, lat, lng);
+					// sunrise = times.sunrise.getHours(),
+					sunset  = times.sunset.getHours(),
 					noon    = 12;
+					midnight= 0;
 
-				if(curr.getHours() < noon && curr.getHours() > sunrise){
+				if(curr.getHours() > midnight && curr.getHours() < noon){
 					$('#greeting').html("Good Morning!");
 				} else if(curr.getHours() > noon && curr.getHours() < sunset) {
 					$('#greeting').html("Good Afternoon!");
