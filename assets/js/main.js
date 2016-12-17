@@ -83,7 +83,7 @@
 
 			// Get today's bing wallpaper as background image
 				var base = 'https://www.bing.com',
-				    json_url = '/HPImageArchive.aspx?format=js&idx=0&n=1';
+				    json_url = '/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US';
 				
 				$.getJSON(base + json_url, function(json){
 					var img_url = base + json.images[0].url;

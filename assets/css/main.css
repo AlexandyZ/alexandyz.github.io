@@ -992,25 +992,9 @@
 				width: auto;
 			}
 /* Link */
-	a:link {
+	a {
     	text-decoration: none;
 		font-weight: 600;
-	}
-
-	a:visited {
-		text-decoration: none;
-		font-weight: 600;
-	}
-
-	a:hover {
-		text-decoration: none;
-		font-weight: 600;
-		font-style: italic;
-	}
-
-	a:active {
-		text-decoration: 600;
-		font-weight: bold;
 	}
 
 /* List */
