@@ -537,9 +537,8 @@
 	}
 
 	@media screen and (max-width: 736px) {
-
-		h2 {
-			font-size: 1.5em;
+		h3{
+			font-size: 2.2em;
 		}
 
 	}
@@ -995,6 +994,7 @@
 	a {
     	text-decoration: none;
 		font-weight: 600;
+		color: inherit;
 	}
 
 /* List */
@@ -1719,7 +1719,7 @@
 		left: 0;
 		top: 0;
 		width: 100%;
-		background: rgba(255, 255, 255, 0.95);
+		background: rgba(255, 255, 255, 0.90);
 		height: 3em;
 		line-height: 3em;
 		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
@@ -1744,6 +1744,10 @@
 			top: 0;
 			height: 3em;
 			line-height: 3em;
+		}
+
+		#header .overlay{
+			display: none;
 		}
 
 			#header nav ul {
@@ -1790,8 +1794,15 @@
 					display: none;
 				}
 
-		}
+				#header .overlay{
+					position: absolute;
+					top: 0;
+					right: 1.0em;
+					display: block;
+				}
 
+		}
+	/*
 	body {
 		padding-top: 3em;
 	}
@@ -1802,7 +1813,7 @@
 				padding-top: 2.5em;
 			}
 
-		}
+		}*/
 
 /* Main */
 
@@ -1840,15 +1851,15 @@
 			-ms-justify-content: center;
 			justify-content: center;
 			text-align: center;
-			padding: 3em 0 3em 0;
+			padding: 6em 0 3em 0;
 		}
 
 			.main.style1 h1 {
-				font-size: 5.25em;
+				font-size: 6.25em;
 				line-height: 1em;
 			}
 			.main.style1 h2{
-				font-size: 2.25em;
+				font-size: 3.25em;
 				line-height: 1em;
 			}
 
@@ -2002,9 +2013,12 @@
 			.main.style1 {
 				padding: 4em 15px 4em 15px;
 			}
+				.main.style1 h1 {
+					font-size: 4em;
+				}
 
 				.main.style1 h2 {
-					font-size: 3em;
+					font-size: 2.25em;
 				}
 
 			.main.style2 {

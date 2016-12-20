@@ -48,10 +48,12 @@
 			// Get current time and set greeting message
 				var curr = new Date();
 				
+				$('#copy').html('&copy;' + curr.getFullYear());
+				 
 				// Show current time
 				setInterval(function(){
 					var time = new Date();
-					$('#time').text(('0' + time.getHours()).slice(-2)
+					$('#showtime').text(('0' + time.getHours()).slice(-2)
 									+ ' : ' 
 									+ ('0' + time.getMinutes()).slice(-2)
 									+ ' : '
