@@ -1732,6 +1732,7 @@
 	#header {
 		position: fixed;
 		z-index: 10000;
+		background: rgba(255, 255, 255, 0.90);
 		left: 0;
 		top: 0;
 		width: 100%;
@@ -1746,7 +1747,6 @@
 			top: 0;
 			height: 3em;
 			line-height: 3em;
-			background: rgba(255, 255, 255, 0.90);
 			cursor: default;
 		}
 
@@ -1793,11 +1793,13 @@
 			#header {
 				height: 3em;
 				line-height: 3em;
+				background: none;
 			}
 
 				#header h1 {
 					text-align: center;
 					position: relative;
+					background: rgba(255, 255, 255, 0.90);
 					left: 0;
 					top: 0;
 					height: 3em;
