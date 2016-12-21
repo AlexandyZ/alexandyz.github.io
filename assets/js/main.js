@@ -22,13 +22,25 @@
 			$window.on('load', function() {
 				window.setTimeout(function() {
 					$body.removeClass('is-loading');
-				}, 0);
+				}, 500);
 			});	
+			
+		// Mobile navigation bar
+			$('#overlay').click(function(){
+				if($('#overlay').hasClass('menu-spin')){
+					$('#overlay').removeClass('menu-spin');
+					$('#header nav').css({'display': 'none'});
+					$('#header nav').removeClass('show-nav');
+				}else{
+					$('#overlay').addClass('menu-spin');
+					$('#header nav').css({'display': 'block'});
+					$('#header nav').addClass('show-nav');
+				}
+			});
 
 		// Load website
 			$window.on('load', function(){
-
-				
+			
 				/** 
 				 * Get current geolocation information
 				 */ 
@@ -46,30 +58,29 @@
 				
 			// Sunrise/sunset time is powered by [SunCalc](https://github.com/mourner/suncalc)
 			// Get current time and set greeting message
-				var curr = new Date();
-				
-				$('#copy').html('&copy;' + curr.getFullYear());
-				 
+				var time = new Date();
+
 				// Show current time
 				setInterval(function(){
-					var time = new Date();
-					$('#showtime').text(('0' + time.getHours()).slice(-2)
+					var curr_time = new Date();
+					$('#showtime').text(('0' + curr_time.getHours()).slice(-2)
 									+ ' : ' 
-									+ ('0' + time.getMinutes()).slice(-2)
+									+ ('0' + curr_time.getMinutes()).slice(-2)
 									+ ' : '
-									+ ('0' + time.getSeconds()).slice(-2));
+									+ ('0' + curr_time.getSeconds()).slice(-2));
 					}, 1000);
 
 				// Set greeting message 
-				var times   = SunCalc.getTimes(curr, lat, lng);
+				var times   = SunCalc.getTimes(time, lat, lng);
 					// sunrise = times.sunrise.getHours(),
 					sunset  = times.sunset.getHours(),
 					noon    = 12;
 					midnight= 0;
+					curr    = time.getHours();
 
-				if(curr.getHours() > midnight && curr.getHours() < noon){
+				if(curr > midnight && curr < noon){
 					$('#greeting').html("Good Morning!");
-				} else if(curr.getHours() > noon && curr.getHours() < sunset) {
+				} else if(curr >= noon && curr < sunset) {
 					$('#greeting').html("Good Afternoon!");
 				} else {
 					$('#greeting').html("Good Evening!");
@@ -105,6 +116,9 @@
 					backspeed: 2000,
 					showCursor: false,
 				});
+
+				$('#copy').html('&copy;' + time.getFullYear());
+
 			});
 
 		// Touch mode.
