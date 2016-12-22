@@ -29,12 +29,23 @@
 			$('#overlay').click(function(){
 				if($('#overlay').hasClass('menu-spin')){
 					$('#overlay').removeClass('menu-spin');
-					$('#header nav').css({'display': 'none'});
 					$('#header nav').removeClass('show-nav');
+					$('#header nav').css({'z-index': '-2'});
+
 				}else{
 					$('#overlay').addClass('menu-spin');
 					$('#header nav').css({'display': 'block'});
 					$('#header nav').addClass('show-nav');
+				}
+			});
+
+		// Display navigation after resize window
+			$window.resize(function(){
+				if($window.width() > 736){
+					$('#header nav').css({'display': 'block'});
+				} else {
+					$('#header nav').css({'display': 'none'});
+
 				}
 			});
 
