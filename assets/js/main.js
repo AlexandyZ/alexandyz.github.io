@@ -142,9 +142,6 @@
 
 			});
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-
 		// Fix: IE flexbox fix.
 			if (skel.vars.IEVersion <= 11
 			&&	skel.vars.IEVersion >= 10) {
