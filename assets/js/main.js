@@ -128,7 +128,7 @@
 					showCursor: false,
 				});
 
-				$('#copy').html('&copy;' + time.getFullYear());
+				$('#copyright').html('&copy; ' + time.getFullYear());
 
 			});
 

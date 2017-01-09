@@ -51,11 +51,15 @@
 		<!-- One -->
 			<section id="one" class="main style2 right dark fullscreen">
 				<div class="content box style2">
-					<img class="image circle left" src="images/me.jpg" alt="Alex Zhang"/>
-					<header>
-						<h2>Who I Am</h2>
-					</header>
-					<p>Hi, I'm Alex, graduted from <a class="link" href="http://www.bcit.ca/study/programs/5500dipma">CST, BCIT</a>. I'm good at Web &amp; Mobile development, Relational Database design &amp; management. I'm also interest in BigData, Block Chain, AI. Besides, I also enhanced my interpersonal skills such as team work leadership, communication skills. </p>
+					<div class="one left">
+						<img class="image circle" src="images/me.jpg" alt="Alex Zhang"/>
+					</div>
+					<div class="one right">
+						<header>
+							<h2>Who I Am</h2>
+						</header>
+						<p>Hi, I'm Alex, recently graduted from <a class="link" href="http://www.bcit.ca/study/programs/5500dipma">BCIT Computer System Technology program</a>. I'm good at Web &amp; Mobile development, database design &amp; management, and interested in BigData, Machine Learning, IoT, and other new Techs. In addition, I have background in medicinal chemisty. Besides, I also enhanced my interpersonal skills such as team work leadership, communication skills. </p>
+					</div>
 				</div>
 				<a href="#two" class="button style2 down anchored">Next</a>
 			</section>
@@ -66,7 +70,14 @@
 					<header>
 						<h2>Who I Do</h2>
 					</header>
-					<p>Techs i can use.</p>
+					<dl class="dl-horizontal">
+						<dt>Languages</dt>
+						<dd>JAVA, C/C++, C#, T-SQL, JavaScript, PHP, R</dd>
+						<dt>Enviroments</dt>
+						<dd>MS Visual Studio, Android Studio, MS SQL server, Oracle Database, Cloudera</dd>
+						<dt>Project Skills</dt>
+						<dd>Agile/Scrum development, Git workflow, Teamwork, Time management, Communication</dd>
+					</dl>
 				</div>
 				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
@@ -110,9 +121,18 @@
 			<section id="contact" class="main style3 secondary">
 				<div class="content">
 					<header>
-						<h2>Say Hello.</h2>
-						<p>What should I put here?</p>
+						<h2>Contact Me</h2>
 					</header>
+					<div class="box">
+						<form method="post" action="#">
+							<div class="field half first"><input type="text" name="name" placeholder="Name" /></div>
+							<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
+							<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>
+					</div>
 				</div>
 			</section>
 
@@ -121,6 +141,7 @@
 
 				<!-- Icons -->
 					<ul class="actions">
+						<li><a href="mailto:zyf1014@hotmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
 						<li><a href="https://www.linkedin.com/in/alexzhang86" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a href="https://www.facebook.com/zyf1014" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 						<li><a href="https://www.github.com/alexandyz" class="icon fa-github"><span class="label">GitHub</span></a></li>
@@ -129,7 +150,7 @@
 
 				<!-- Menu -->
 					<ul class="menu">
-						<li id="copy"></li><li>Designed by <a href="zyf1014@hotmail.com">Alex Zhang</a></li>
+						<li id="copyright"></li><li>Created by <a href="mailto:zyf1014@hotmail.com">Alex Zhang</a></li>
 					</ul>
 
 			</footer>
