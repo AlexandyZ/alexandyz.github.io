@@ -52,9 +52,7 @@
 		// Load website
 			$window.on('load', function(){
 			
-				/** 
-				 * Get current geolocation information
-				 */ 
+			// Get current geolocation information
 				var lat = 49.250946,   //default: BCIT, Burnaby, BC
 				lng = -123.002575;
 				if (navigator.geolocation) {
@@ -63,8 +61,8 @@
 				 		lng = location.coords.longitude;
 					});
 				} else {
-					alert("no");
-					toastr.warning('Get Geolocation infomation failed.');
+					//alert("no");
+					toastr.warning("Get Geolocation infomation failed.");
 				}
 				
 			// Sunrise/sunset time is powered by [SunCalc](https://github.com/mourner/suncalc)
@@ -74,17 +72,21 @@
 				// Show current time
 				setInterval(function(){
 					var curr_time = new Date();
-					$('#showtime').text(('0' + curr_time.getHours()).slice(-2)
-									+ ' : ' 
-									+ ('0' + curr_time.getMinutes()).slice(-2)
-									+ ' : '
-									+ ('0' + curr_time.getSeconds()).slice(-2));
-					}, 1000);
+					$('#showtime').text(
+									//('0' + curr_time.getHours()).slice(-2)
+									//+ ' : ' 
+									//+ ('0' + curr_time.getMinutes()).slice(-2)
+									//+ ' : '
+									//+ ('0' + curr_time.getSeconds()).slice(-2)
+									curr_time.toLocaleTimeString()
+									);
+					}
+					, 1000);
 
 				// Set greeting message 
-				var times   = SunCalc.getTimes(time, lat, lng);
-					// sunrise = times.sunrise.getHours(),
-					sunset  = times.sunset.getHours(),
+				var sunTimes   = SunCalc.getTimes(time, lat, lng);
+					// sunrise = sunTimes.sunrise.getHours(),
+					sunset  = sunTimes.sunset.getHours(),
 					noon    = 12;
 					midnight= 0;
 					curr    = time.getHours();
@@ -119,7 +121,6 @@
 				});
 
 			// Dynamic text using typed.js
-			
 				$("#text-dynamic").typed({
 					strings: ["a BCITer.", "a Coder.", "a Learner.", "a Hiker.", "Alex."],
 					typeSpeed: 80,
@@ -127,9 +128,7 @@
 					backspeed: 2000,
 					showCursor: false,
 				});
-
 				$('#copyright').html('&copy; ' + time.getFullYear());
-
 			});
 
 		// Touch mode.
@@ -160,7 +159,8 @@
 								$this.css('height', (wh - 50) + 'px');
 						});
 					});
-				}).triggerHandler('resize.ie-flexbox-fix');
+				})
+				.triggerHandler('resize.ie-flexbox-fix');
 			}
 
 		// Prioritize "important" elements on small.
@@ -179,7 +179,8 @@
 				$gallery.poptrox({
 					baseZIndex: 10001,
 					useBodyOverflow: false,
-					usePopupEasyClose: false,
+					usePopupEasyClose: true,
+					usePopupForceClose: true,
 					overlayColor: '#1f2328',
 					overlayOpacity: 0.65,
 					usePopupDefaultStyling: false,
