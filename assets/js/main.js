@@ -183,7 +183,7 @@
 					usePopupForceClose: true,
 					overlayColor: '#1f2328',
 					overlayOpacity: 0.65,
-					usePopupDefaultStyling: false,
+					//usePopupDefaultStyling: false,
 					usePopupCaption: true,
 					popupLoaderText: '',
 					windowMargin: 50,
