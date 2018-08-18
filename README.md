@@ -6,7 +6,7 @@
 - Template is designed by [HTML5 UP](https://html5up.net/) <img src="https://html5up.net/assets/icons/favicon.ico" width=18px alt="HTML5 UP"/>
 - Background image is powered by [Bing Homepage Gallery](http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1) <img src="http://www.bing.com/sa/simg/bing_p_rr_teal_min.ico" width=18px alt="Bing Homepage Gallery"/>
 - Gallery function is powered by [Poptrox](https://github.com/ajlkn/jquery.poptrox) <img src="https://avatars3.githubusercontent.com/u/2937342?v=3&s=400" width=18px alt="Poptrox"/>
-- Icons are powered by [Font Awesome](https://fortawesome.github.io/Font-Awesome/cheatsheet) <img src="http://fontawesome.io/assets/ico/favicon.ico" width=18px alt="FontAwesome"/>
+- Icons are powered by [Font Awesome](https://fortawesome.github.io/Font-Awesome/cheatsheet) <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Font_Awesome_logomark_blue.svg" width=18px alt="FontAwesome"/>
 
 ### Big Picture
 Being a single pager, Big Picture should be way simpler to work with than some of the heavier stuff. Aside from a main page `<header>` and `<footer>`, it's pretty much just a stack of "main" `<section>` elements that follow the same basic pattern:
